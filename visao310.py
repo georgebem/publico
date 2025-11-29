@@ -2,6 +2,8 @@
 conda create -n gtm310 python=3.10
 conda activate gtm310
 
+pip install "tensorflow==2.15.0" numpy opencv-python h5py
+
 python -c "import tensorflow as tf; print(tf.__version__); print(hasattr(tf, 'keras'))"
 deve gerar a saida: 2.15.0 True
 
@@ -87,3 +89,4 @@ try:
 finally:
     cap.release()
     cv2.destroyAllWindows()
+
