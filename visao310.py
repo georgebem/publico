@@ -1,3 +1,12 @@
+'''
+conda create -n gtm310 python=3.10
+conda activate gtm310
+
+python -c "import tensorflow as tf; print(tf.__version__); print(hasattr(tf, 'keras'))"
+deve gerar a saida: 2.15.0 True
+
+'''
+
 import cv2
 import numpy as np
 import tensorflow as tf
@@ -6,7 +15,7 @@ import os
 # -------------------------------------------------
 # 1) Carregar modelo e labels
 # -------------------------------------------------
-MODEL_PATH = "keras_Model.h5"
+MODEL_PATH = "keras_model.h5"
 LABELS_PATH = "labels.txt"
 
 print(f"Carregando modelo de: {MODEL_PATH}")
